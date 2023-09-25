@@ -1,0 +1,16 @@
+body{
+    font-family: 'Lexend', sans-serif;
+}
+.navbar-toggler {
+    border-radius: 0;
+    border: 1px solid #0d6efd;
+}
+.card-course {
+    transition: 0.3s;
+}
+
+.card-course:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 8px 16px 0 rgba(8, 26, 105, 0.237); */
+}
+
