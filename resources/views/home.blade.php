@@ -12,7 +12,8 @@
                     <p class="lead text-body-secondary">Menawarkan lingkungan pemograman yang mempermudah Anda memulai.</p>
                 </div>
                 <div>
-                    <button class="btn btn-primary rounded-0 py-2 px-3">Daftar</button>
+                    <button class="btn btn-primary rounded-0 py-2 px-3" data-bs-target="#register"
+                        data-bs-toggle="modal">Daftar</button>
                 </div>
             </div>
             <div class="col-md">
@@ -63,6 +64,9 @@
     <div class="wrapper-end text-center p-5 my-5 ">
         <h3>Apakah anda siap untuk menjadi programer yang handal?</h3>
         <p class="mb-5">Ayo belajar coding, ayo belajar menjadi lebih kreatif!</p>
-        <button class="btn btn-primary rounded-0 py-2 px-3">Mulai Belajar</button>
+        <button class="btn btn-primary rounded-0 py-2 px-3" data-bs-target="#login" data-bs-toggle="modal">Mulai
+            Belajar</button>
     </div>
+
+    
 @endsection

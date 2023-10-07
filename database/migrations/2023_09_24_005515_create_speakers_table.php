@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('speakers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');  
-            $table->string('name');
-            $table->text('profile');
+            $table->foreignId('user_id');              
+            $table->string('photo');
+            $table->text('note');
+            $table->string('status');
             $table->timestamps();
         });
     }

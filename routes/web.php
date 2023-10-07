@@ -22,3 +22,4 @@ Route::get('/kelas', function () {
 Route::get('/artikel', function () {
     return view('articles');
 });
+
