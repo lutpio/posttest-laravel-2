@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('speakers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');              
-            $table->string('photo');
+            $table->string('photo')->nullable();;
             $table->text('note');
             $table->string('status');
             $table->timestamps();

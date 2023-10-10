@@ -17,4 +17,9 @@ class Course extends Model
         return $this->belongsTo(Speaker::class,'speaker_id'); 
 
     }
+    
+    public function getRouteKeyName(){
+        return 'slug';
+    }
+   
 }

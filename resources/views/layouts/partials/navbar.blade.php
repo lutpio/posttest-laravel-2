@@ -17,9 +17,16 @@
                     <a class="nav-link {{ Request::is('artikel*') ? 'active' : '' }}" href="/artikel">ARTIKEL</a>
                 </li>
             </ul>
+            @auth
+                <a class="btn btn-outline-primary rounded-0 " href="/dashboard">
+                    Dashboard
+                </a>
+            @else
+                <button class="btn btn-outline-primary rounded-0 " data-bs-target="#login" data-bs-toggle="modal">
+                    Login
+                </button>
+            @endauth
 
-            <button class="btn btn-outline-primary rounded-0 " data-bs-target="#login"
-                data-bs-toggle="modal">Login</button>
 
         </div>
     </div>
@@ -27,22 +34,25 @@
 {{-- modal --}}
 <div class="modal fade" id="login" aria-hidden="true" aria-labelledby="loginLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content rounded-0">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="loginLabel">Login</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
 
-                <form>
+                <form action="/login" method="POST">
+                    @csrf
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control rounded-0" id="email" name="email"
+                            placeholder="contoh@gmail.com">
 
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control rounded-0" id="password" name="password"
+                            placeholder="••••••••">
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
 
@@ -59,25 +69,38 @@
 </div>
 <div class="modal fade" id="register" aria-hidden="true" aria-labelledby="registerLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content rounded-0">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="registerLabel">Register</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="/register" method="POST">
+                    @csrf
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1">
-
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control rounded-0" id="name" name="name"
+                            placeholder="nama">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="nickname" class="form-label">Nama Panggilan</label>
+                        <input type="text" class="form-control rounded-0" id="nickname" name="nickname"
+                            placeholder="nama">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control rounded-0" id="email" name="email"
+                            placeholder="contoh@gmail.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control rounded-0" id="password" name="password"
+                            placeholder="••••••••">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password_confirmation" class="form-label">Konfirmasi Password </label>
+                        <input type="password" class="form-control rounded-0" id="password_confirmation"
+                            placeholder="••••••••" name="password_confirmation">
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
 
