@@ -53,7 +53,7 @@ class SuperCourseController extends Controller
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('course-images');
         }                    
-        $validatedData['slug'] = $request->slug . "-" . time();
+        $validatedData['slug'] = $request->slug . "-" . time(); 
         $validatedData['status'] = "aktif";
         
         Course::create($validatedData);

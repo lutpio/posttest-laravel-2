@@ -2,6 +2,11 @@
 
 <p>Alasan saya memilih ini karena, punya niat untuk mengajarkan programming di sekolah saya <i><strong>agar anak2 tidak terkejut dan stress karena coding dadakan saat mereka memilih jurusan SI / IF.</strong></i></p>
 
+<hr>
+<h2>Tugas 1 - "first commit"</h2>
+<hr>
+
+
 <br>
 <h2>Demo</h2>
 
@@ -27,3 +32,9 @@
 
 <p>Menampilkan halaman yang berisi artikel yang dapat mempermudah user untuk belajar.</p>
 
+<hr>
+<h2>Tugas 2 - "5th commit"</h2>
+<hr>
+
+<br>
+<h3>Halaman Kelas</h3>
